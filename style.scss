@@ -151,6 +151,9 @@ body {
     &__title {
       font-size: 6.4rem;
     }
+    &__text {
+        min-height: 50vh;
+    }
     &__button {
       &--clear {
         grid-column: 1 / span 3;

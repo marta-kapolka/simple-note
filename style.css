@@ -96,6 +96,8 @@ body {
     column-gap: 30px; }
     .note__title {
       font-size: 6.4rem; }
+    .note__text {
+      min-height: 50vh; }
     .note__button--clear {
       grid-column: 1 / span 3; }
     .note__button--delete {
