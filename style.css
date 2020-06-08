@@ -18,57 +18,83 @@ body {
 .flex-container {
   align-items: center;
   display: flex;
-  flex: 1;
   justify-content: center;
   min-height: 100vh;
+  padding: 2rem;
   width: 100vw; }
 
 .note {
   column-gap: 10px;
   display: grid;
-  grid-template-columns: repeat(12, 1fr); }
+  flex: 1;
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 80rem; }
   .note__title {
     font-size: 5rem;
-    grid-column: 2 / span 10;
+    grid-column: 1 / span 12;
     margin-top: 1rem;
     text-align: center;
     width: 100%;
     color: #444;
     text-shadow: -2px -2px 8px #747474, 2px 2px 8px #161616; }
   .note__area {
-    grid-column: 2 / span 10; }
+    grid-column: 1 / span 12; }
   .note__text {
     background-color: #444;
     border-radius: 1rem;
     border-style: none;
     color: #ccc;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-size: 2.2rem;
     font-weight: 300;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
     min-height: 24rem;
     padding: 1rem;
     width: 100%;
     background-color: #444;
     box-shadow: -1px -1px 5px #161616, 1px 1px 5px #747474; }
     .note__text:focus {
-      color: #fff; }
+      background-color: #202020;
+      color: #fff;
+      outline: none; }
   .note__button {
     background-color: #444;
     border-radius: 2.5rem;
     border-style: none;
     font-size: 3.2rem;
     font-weight: 700;
-    grid-column: 3 / span 8;
+    grid-column: 1 / span 12;
     height: 4rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.4rem;
     text-align: center;
     text-transform: uppercase;
     background-color: #444;
     box-shadow: -2px -2px 8px #747474, 2px 2px 8px #161616; }
+    .note__button:hover {
+      color: #202020; }
+    .note__button:active {
+      box-shadow: -1px -1px 5px #747474, 1px 1px 5px #161616; }
     .note__button--save {
       color: #42d46b; }
+      .note__button--save:hover {
+        background-color: #42d46b; }
     .note__button--load {
       color: #357ab9; }
+      .note__button--load:hover {
+        background-color: #357ab9; }
     .note__button--delete {
       color: #d45442; }
+      .note__button--delete:hover {
+        background-color: #d45442; }
+
+@media (min-width: 600px) {
+  .note {
+    column-gap: 40px; }
+    .note__title {
+      font-size: 6.4rem; }
+    .note__button--delete {
+      grid-column: 1 / span 4; }
+    .note__button--load {
+      grid-column: 5 / span 4; }
+    .note__button--save {
+      grid-column: 9 / span 4; } }
