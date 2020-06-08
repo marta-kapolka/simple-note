@@ -1,15 +1,120 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;700&family=Quicksand:wght@300;400&display=swap');
+
+// COLORS
+$dark-background: #444;
+
+$dark-shadow: #161616;
+$light-shadow: #747474;
+
+$red: #d45442;
+$blue: #357ab9;
+$green: #42d46b;
+
+$gray-text: #ccc;
+$white-text: #fff;
+
+// MIXINS
+@mixin text-shadow-out {
+  color: $dark-background;
+  text-shadow: -2px -2px 8px $light-shadow, 2px 2px 8px $dark-shadow;
+}
+
+@mixin box-shadow-out-small {
+  background-color: $dark-background;
+  box-shadow: -1px -1px 5px $light-shadow, 1px 1px 5px $dark-shadow;
+}
+
+@mixin box-shadow-out-normal {
+  background-color: $dark-background;
+  box-shadow: -2px -2px 8px $light-shadow, 2px 2px 8px $dark-shadow;
+}
+
+@mixin box-shadow-in-small {
+  background-color: $dark-background;
+  box-shadow: -1px -1px 5px $dark-shadow, 1px 1px 5px $light-shadow;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+}
 
 body {
-  background-color: #444;
+  background-color: $dark-background;
   box-sizing: border-box;
+  font-family: "Palanquin Dark", sans-serif;
+}
+
+.flex-container {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.note {
+  column-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  &__title {
+    font-size: 5rem;
+    grid-column: 2 / span 10;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    @include text-shadow-out();
+  }
+  &__area {
+    grid-column: 2 / span 10;
+  }
+  &__text {
+    background-color: $dark-background;
+    border-radius: 1rem;
+    border-style: none;
+    color: $gray-text;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 3.5rem;
+    min-height: 24rem;
+    padding: 1rem;
+    width: 100%;
+    @include box-shadow-in-small();
+    &:focus {
+        color: $white-text;
+    }
+  }
+  &__button {
+    background-color: $dark-background;
+    border-radius: 2.5rem;
+    border-style: none;
+    font-size: 3.2rem;
+    font-weight: 700;
+    grid-column: 3 / span 8;
+    height: 4rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    @include box-shadow-out-normal();
+    &--save {
+      color: $green;
+    }
+    &--load {
+      color: $blue;
+    }
+    &--delete {
+      color: $red;
+    }
+  }
 }

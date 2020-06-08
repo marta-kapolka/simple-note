@@ -12,14 +12,20 @@
     <title>simple note</title>
   </head>
   <body>
-    <main>
-      <h1>simple note</h1>
-      <form>
-          <textarea aria-label="type your note" placeholder="type your note..."></textarea>
-      </form>
-      <button>save</button>
-      <button>load</button>
-      <button>delete</button>
-    </main>
+    <div class="flex-container">
+      <main class="note">
+        <h1 class="note__title">simple note</h1>
+        <form class="note__area">
+          <textarea
+            class="note__text"
+            aria-label="type your note"
+            placeholder="type your note..."
+          ></textarea>
+        </form>
+        <button class="note__button note__button--save">save</button>
+        <button class="note__button note__button--load">load</button>
+        <button class="note__button note__button--delete">delete</button>
+      </main>
+    </div>
   </body>
 </html>
