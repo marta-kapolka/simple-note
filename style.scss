@@ -118,6 +118,12 @@ body {
       @include box-shadow-out-small();
     }
     @include box-shadow-out-normal();
+    &--clear {
+      color: $gray-text;
+      &:hover {
+        background-color: $gray-text;
+      }
+    }
     &--save {
       color: $green;
       &:hover {
@@ -141,19 +147,22 @@ body {
 
 @media (min-width: 600px) {
   .note {
-    column-gap: 40px;
+    column-gap: 30px;
     &__title {
-        font-size: 6.4rem;
+      font-size: 6.4rem;
     }
     &__button {
+      &--clear {
+        grid-column: 1 / span 3;
+      }
       &--delete {
-        grid-column: 1 / span 4;
+        grid-column: 4 / span 3;
       }
       &--load {
-        grid-column: 5 / span 4;
+        grid-column: 7 / span 3;
       }
       &--save {
-        grid-column: 9 / span 4;
+        grid-column: 10 / span 3;
       }
     }
   }

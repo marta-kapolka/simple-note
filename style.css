@@ -74,6 +74,10 @@ body {
       color: #202020; }
     .note__button:active {
       box-shadow: -1px -1px 5px #747474, 1px 1px 5px #161616; }
+    .note__button--clear {
+      color: #ccc; }
+      .note__button--clear:hover {
+        background-color: #ccc; }
     .note__button--save {
       color: #42d46b; }
       .note__button--save:hover {
@@ -89,12 +93,14 @@ body {
 
 @media (min-width: 600px) {
   .note {
-    column-gap: 40px; }
+    column-gap: 30px; }
     .note__title {
       font-size: 6.4rem; }
+    .note__button--clear {
+      grid-column: 1 / span 3; }
     .note__button--delete {
-      grid-column: 1 / span 4; }
+      grid-column: 4 / span 3; }
     .note__button--load {
-      grid-column: 5 / span 4; }
+      grid-column: 7 / span 3; }
     .note__button--save {
-      grid-column: 9 / span 4; } }
+      grid-column: 10 / span 3; } }
