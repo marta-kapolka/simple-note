@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;700&family=Quicksand:wght@300;400&display=swap");
 
 // COLORS
-$dark-background: #bbb;
+/* $dark-background: #bbb;
 
 $dark-shadow: #666;
 $light-shadow: #fff;
@@ -14,9 +14,9 @@ $green: hsl(127, 79%, 34%);
 $gray-text: #222;
 $white-text: #000;
 
-$dark-gray: #e7e7e7;
+$dark-gray: #e7e7e7; */
 
-/* $dark-background: #333;
+$dark-background: #333;
 
 $dark-shadow: #000000;
 $light-shadow: #5a5a5a;
@@ -28,7 +28,7 @@ $green: #2ECC40;
 $gray-text: #ccc;
 $white-text: #fff;
 
-$dark-gray: #2020 */
+$dark-gray: #202020;
 
 // MIXINS
 @mixin text-shadow-out {
