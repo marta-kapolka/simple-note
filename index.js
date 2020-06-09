@@ -1,6 +1,3 @@
-const entryNote = document.querySelector('.entry--js');
-console.log(entryNote);
-
 const saveButton = document.querySelector('.save--js');
 const loadButton = document.querySelector('.load--js');
 const deleteButton = document.querySelector('.delete--js');

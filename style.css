@@ -11,7 +11,7 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  background-color: #444;
+  background-color: #333;
   box-sizing: border-box;
   font-family: "Palanquin Dark", sans-serif; }
 
@@ -35,12 +35,12 @@ body {
     margin-top: 1rem;
     text-align: center;
     width: 100%;
-    color: #444;
-    text-shadow: -2px -2px 8px #747474, 2px 2px 8px #161616; }
+    color: #333;
+    text-shadow: -2px -2px 8px #5a5a5a, 2px 2px 8px #000000; }
   .note__area {
     grid-column: 1 / span 12; }
   .note__text {
-    background-color: #444;
+    background-color: #333;
     border-radius: 1rem;
     border-style: none;
     color: #ccc;
@@ -51,14 +51,14 @@ body {
     min-height: 16rem;
     padding: 1rem;
     width: 100%;
-    background-color: #444;
-    box-shadow: -1px -1px 5px #161616, 1px 1px 5px #747474; }
+    background-color: #333;
+    box-shadow: -1px -1px 5px #000000, 1px 1px 5px #5a5a5a; }
     .note__text:focus {
       background-color: #202020;
       color: #fff;
       outline: none; }
   .note__button {
-    background-color: #444;
+    background-color: #333;
     border-radius: 2.5rem;
     border-style: none;
     font-size: 3.2rem;
@@ -68,28 +68,28 @@ body {
     margin-bottom: 2.4rem;
     text-align: center;
     text-transform: uppercase;
-    background-color: #444;
-    box-shadow: -2px -2px 8px #747474, 2px 2px 8px #161616; }
+    background-color: #333;
+    box-shadow: -2px -2px 8px #5a5a5a, 2px 2px 8px #000000; }
     .note__button:hover {
       color: #202020; }
     .note__button:active {
-      box-shadow: -1px -1px 5px #747474, 1px 1px 5px #161616; }
+      box-shadow: -1px -1px 5px #5a5a5a, 1px 1px 5px #000000; }
     .note__button--clear {
       color: #ccc; }
       .note__button--clear:hover {
         background-color: #ccc; }
     .note__button--save {
-      color: #42d46b; }
+      color: #2ECC40; }
       .note__button--save:hover {
-        background-color: #42d46b; }
+        background-color: #2ECC40; }
     .note__button--load {
-      color: #357ab9; }
+      color: #0074D9; }
       .note__button--load:hover {
-        background-color: #357ab9; }
+        background-color: #0074D9; }
     .note__button--delete {
-      color: #d45442; }
+      color: #FF4136; }
       .note__button--delete:hover {
-        background-color: #d45442; }
+        background-color: #FF4136; }
 
 @media (min-width: 600px) {
   .note {
