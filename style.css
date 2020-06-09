@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;700&family=Quicksand:wght@300;400&display=swap");
+/* $dark-background: #333;
+
+$dark-shadow: #000000;
+$light-shadow: #5a5a5a;
+
+$red: #FF4136;
+$blue: #0074D9;
+$green: #2ECC40;
+
+$gray-text: #ccc;
+$white-text: #fff;
+
+$dark-gray: #2020 */
 *,
 *::before,
 *::after {
@@ -11,7 +24,7 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  background-color: #333;
+  background-color: #bbb;
   box-sizing: border-box;
   font-family: "Palanquin Dark", sans-serif; }
 
@@ -35,15 +48,15 @@ body {
     margin-top: 1rem;
     text-align: center;
     width: 100%;
-    color: #333;
-    text-shadow: -2px -2px 8px #5a5a5a, 2px 2px 8px #000000; }
+    color: #bbb;
+    text-shadow: -2px -2px 8px #fff, 2px 2px 8px #666; }
   .note__area {
     grid-column: 1 / span 12; }
   .note__text {
-    background-color: #333;
+    background-color: #bbb;
     border-radius: 1rem;
     border-style: none;
-    color: #ccc;
+    color: #222;
     font-family: "Quicksand", sans-serif;
     font-size: 2.2rem;
     font-weight: 300;
@@ -51,14 +64,14 @@ body {
     min-height: 16rem;
     padding: 1rem;
     width: 100%;
-    background-color: #333;
-    box-shadow: -1px -1px 5px #000000, 1px 1px 5px #5a5a5a; }
+    background-color: #bbb;
+    box-shadow: -1px -1px 5px #666, 1px 1px 5px #fff; }
     .note__text:focus {
-      background-color: #202020;
-      color: #fff;
+      background-color: #e7e7e7;
+      color: #000;
       outline: none; }
   .note__button {
-    background-color: #333;
+    background-color: #bbb;
     border-radius: 2.5rem;
     border-style: none;
     font-size: 3.2rem;
@@ -68,28 +81,28 @@ body {
     margin-bottom: 2.4rem;
     text-align: center;
     text-transform: uppercase;
-    background-color: #333;
-    box-shadow: -2px -2px 8px #5a5a5a, 2px 2px 8px #000000; }
+    background-color: #bbb;
+    box-shadow: -2px -2px 8px #fff, 2px 2px 8px #666; }
     .note__button:hover {
-      color: #202020; }
+      color: #e7e7e7; }
     .note__button:active {
-      box-shadow: -1px -1px 5px #5a5a5a, 1px 1px 5px #000000; }
+      box-shadow: -1px -1px 5px #fff, 1px 1px 5px #666; }
     .note__button--clear {
-      color: #ccc; }
+      color: #222; }
       .note__button--clear:hover {
-        background-color: #ccc; }
+        background-color: #222; }
     .note__button--save {
-      color: #2ECC40; }
+      color: #129b22; }
       .note__button--save:hover {
-        background-color: #2ECC40; }
+        background-color: #129b22; }
     .note__button--load {
-      color: #0074D9; }
+      color: #0057a3; }
       .note__button--load:hover {
-        background-color: #0074D9; }
+        background-color: #0057a3; }
     .note__button--delete {
-      color: #FF4136; }
+      color: #c72118; }
       .note__button--delete:hover {
-        background-color: #FF4136; }
+        background-color: #c72118; }
 
 @media (min-width: 600px) {
   .note {
