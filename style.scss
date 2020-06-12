@@ -55,6 +55,7 @@ $dark-gray: #202020;
 }
 
 @mixin button-info {
+  color: $white-text;
   display: block;
   font-family: "Quicksand", sans-serif;
   font-size: 2rem;

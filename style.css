@@ -93,6 +93,7 @@ body {
         background-color: #ccc; }
         .note__button--clear:hover::after {
           background-color: rgba(204, 204, 204, 0.6);
+          color: #fff;
           display: block;
           font-family: "Quicksand", sans-serif;
           font-size: 2rem;
@@ -111,6 +112,7 @@ body {
         background-color: #2ECC40; }
         .note__button--save:hover::after {
           background-color: rgba(46, 204, 64, 0.6);
+          color: #fff;
           display: block;
           font-family: "Quicksand", sans-serif;
           font-size: 2rem;
@@ -129,6 +131,7 @@ body {
         background-color: #0074D9; }
         .note__button--load:hover::after {
           background-color: rgba(0, 116, 217, 0.6);
+          color: #fff;
           display: block;
           font-family: "Quicksand", sans-serif;
           font-size: 2rem;
@@ -147,6 +150,7 @@ body {
         background-color: #FF4136; }
         .note__button--delete:hover::after {
           background-color: rgba(255, 65, 54, 0.6);
+          color: #fff;
           display: block;
           font-family: "Quicksand", sans-serif;
           font-size: 2rem;
@@ -170,6 +174,7 @@ body {
     .note__button--clear {
       grid-column: 1 / span 3; }
       .note__button--clear:hover::after {
+        color: #fff;
         display: block;
         font-family: "Quicksand", sans-serif;
         font-size: 2rem;
@@ -185,6 +190,7 @@ body {
     .note__button--delete {
       grid-column: 4 / span 3; }
       .note__button--delete:hover::after {
+        color: #fff;
         display: block;
         font-family: "Quicksand", sans-serif;
         font-size: 2rem;
@@ -200,6 +206,7 @@ body {
     .note__button--load {
       grid-column: 7 / span 3; }
       .note__button--load:hover::after {
+        color: #fff;
         display: block;
         font-family: "Quicksand", sans-serif;
         font-size: 2rem;
@@ -215,6 +222,7 @@ body {
     .note__button--save {
       grid-column: 10 / span 3; }
       .note__button--save:hover::after {
+        color: #fff;
         display: block;
         font-family: "Quicksand", sans-serif;
         font-size: 2rem;
