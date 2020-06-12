@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;700&family=Quicksand:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;700&family=Quicksand:wght@300;400;700&display=swap");
 /* $dark-background: #bbb;
 
 $dark-shadow: #666;
@@ -91,20 +91,76 @@ body {
       color: #ccc; }
       .note__button--clear:hover {
         background-color: #ccc; }
+        .note__button--clear:hover::after {
+          background-color: rgba(204, 204, 204, 0.6);
+          display: block;
+          font-family: "Quicksand", sans-serif;
+          font-size: 2rem;
+          font-weight: 700;
+          padding: 4rem;
+          position: absolute;
+          right: 3vw;
+          top: 3vw;
+          width: 94vw; }
+      .note__button--clear::after {
+        content: "clear textbox";
+        display: none; }
     .note__button--save {
       color: #2ECC40; }
       .note__button--save:hover {
         background-color: #2ECC40; }
+        .note__button--save:hover::after {
+          background-color: rgba(46, 204, 64, 0.6);
+          display: block;
+          font-family: "Quicksand", sans-serif;
+          font-size: 2rem;
+          font-weight: 700;
+          padding: 4rem;
+          position: absolute;
+          right: 3vw;
+          top: 3vw;
+          width: 94vw; }
+      .note__button--save::after {
+        content: "save your note";
+        display: none; }
     .note__button--load {
       color: #0074D9; }
       .note__button--load:hover {
         background-color: #0074D9; }
+        .note__button--load:hover::after {
+          background-color: rgba(0, 116, 217, 0.6);
+          display: block;
+          font-family: "Quicksand", sans-serif;
+          font-size: 2rem;
+          font-weight: 700;
+          padding: 4rem;
+          position: absolute;
+          right: 3vw;
+          top: 3vw;
+          width: 94vw; }
+      .note__button--load::after {
+        content: "load saved note from storage";
+        display: none; }
     .note__button--delete {
       color: #FF4136; }
       .note__button--delete:hover {
         background-color: #FF4136; }
+        .note__button--delete:hover::after {
+          background-color: rgba(255, 65, 54, 0.6);
+          display: block;
+          font-family: "Quicksand", sans-serif;
+          font-size: 2rem;
+          font-weight: 700;
+          padding: 4rem;
+          position: absolute;
+          right: 3vw;
+          top: 3vw;
+          width: 94vw; }
+      .note__button--delete::after {
+        content: "delete saved note from storage";
+        display: none; }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .note {
     column-gap: 30px; }
     .note__title {
@@ -113,9 +169,61 @@ body {
       min-height: 50vh; }
     .note__button--clear {
       grid-column: 1 / span 3; }
+      .note__button--clear:hover::after {
+        display: block;
+        font-family: "Quicksand", sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 4rem;
+        position: absolute;
+        right: 3vw;
+        top: 3vw;
+        width: 94vw;
+        right: 1vw;
+        top: 1vw;
+        width: 98vw; }
     .note__button--delete {
       grid-column: 4 / span 3; }
+      .note__button--delete:hover::after {
+        display: block;
+        font-family: "Quicksand", sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 4rem;
+        position: absolute;
+        right: 3vw;
+        top: 3vw;
+        width: 94vw;
+        right: 1vw;
+        top: 1vw;
+        width: 98vw; }
     .note__button--load {
       grid-column: 7 / span 3; }
+      .note__button--load:hover::after {
+        display: block;
+        font-family: "Quicksand", sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 4rem;
+        position: absolute;
+        right: 3vw;
+        top: 3vw;
+        width: 94vw;
+        right: 1vw;
+        top: 1vw;
+        width: 98vw; }
     .note__button--save {
-      grid-column: 10 / span 3; } }
+      grid-column: 10 / span 3; }
+      .note__button--save:hover::after {
+        display: block;
+        font-family: "Quicksand", sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 4rem;
+        position: absolute;
+        right: 3vw;
+        top: 3vw;
+        width: 94vw;
+        right: 1vw;
+        top: 1vw;
+        width: 98vw; } }

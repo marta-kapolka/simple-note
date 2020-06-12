@@ -1,5 +1,5 @@
 // FONTS
-@import url("https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;700&family=Quicksand:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;700&family=Quicksand:wght@300;400;700&display=swap");
 
 // COLORS
 /* $dark-background: #bbb;
@@ -22,10 +22,14 @@ $dark-shadow: #000000;
 $light-shadow: #5a5a5a;
 
 $red: #FF4136;
+$red-opacity: rgba(255, 65, 54, .6);
 $blue: #0074D9;
+$blue-opacity: rgba(0, 116, 217, .6);
 $green: #2ECC40;
+$green-opacity: rgba(46, 204, 64, .6);
 
 $gray-text: #ccc;
+$gray-text-opacity: rgba(204, 204, 204, .6);
 $white-text: #fff;
 
 $dark-gray: #202020;
@@ -48,6 +52,25 @@ $dark-gray: #202020;
 @mixin box-shadow-in-small {
   background-color: $dark-background;
   box-shadow: -1px -1px 5px $dark-shadow, 1px 1px 5px $light-shadow;
+}
+
+@mixin button-info {
+  display: block;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 4rem;
+  position: absolute;
+  right: 3vw;
+  top: 3vw;
+  width: 94vw;
+}
+
+@mixin button-info-big-screen {
+  @include button-info();
+  right: 1vw;
+  top: 1vw;
+  width: 98vw;
 }
 
 *,
@@ -136,30 +159,62 @@ body {
       color: $gray-text;
       &:hover {
         background-color: $gray-text;
+        &::after {
+          background-color: $gray-text-opacity;
+          @include button-info();
+          }
+      }
+      &::after {
+        content: "clear textbox";
+        display: none;
       }
     }
     &--save {
       color: $green;
       &:hover {
         background-color: $green;
+        &::after {
+          background-color: $green-opacity;
+          @include button-info();
+          }
+      }
+      &::after {
+        content: "save your note";
+        display: none;
       }
     }
     &--load {
       color: $blue;
       &:hover {
         background-color: $blue;
+        &::after {
+          background-color: $blue-opacity;
+          @include button-info();
+          }
+      }
+      &::after {
+        content: "load saved note from storage";
+        display: none;
       }
     }
     &--delete {
       color: $red;
       &:hover {
         background-color: $red;
+        &::after {
+          background-color: $red-opacity;
+          @include button-info();
+          }
+      }
+      &::after {
+        content: "delete saved note from storage";
+        display: none;
       }
     }
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .note {
     column-gap: 30px;
     &__title {
@@ -171,15 +226,27 @@ body {
     &__button {
       &--clear {
         grid-column: 1 / span 3;
+        &:hover::after {
+          @include button-info-big-screen();
+        }
       }
       &--delete {
         grid-column: 4 / span 3;
+        &:hover::after {
+          @include button-info-big-screen();
+        }
       }
       &--load {
         grid-column: 7 / span 3;
+        &:hover::after {
+          @include button-info-big-screen();
+        }
       }
       &--save {
         grid-column: 10 / span 3;
+        &:hover::after {
+          @include button-info-big-screen();
+        }
       }
     }
   }
