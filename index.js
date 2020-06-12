@@ -6,7 +6,8 @@ const deleteButton = document.querySelector('.delete--js');
 const clearButton = document.querySelector('.clear--js');
 
 saveButton.addEventListener('click', () => {
-    localStorage.setItem('entry', entryNote.value)
+    localStorage.setItem('entry', entryNote.value);
+    entryNote.value = '';
 })
 
 loadButton.addEventListener('click', () => {
