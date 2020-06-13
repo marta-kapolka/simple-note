@@ -2,9 +2,11 @@
 
 Prosty notatnik z opcją zapisu treści notatki do local storage.
 
-
 ![podgląd simple note](public/simple-note.jpg)
 
+## wypróbuj!
+
+> https://marta-kapolka.github.io/simple-note/
 
 ## po co i dlaczego?
 
