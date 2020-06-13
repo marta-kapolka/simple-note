@@ -5,20 +5,54 @@ const loadButton = document.querySelector('.load--js');
 const deleteButton = document.querySelector('.delete--js');
 const clearButton = document.querySelector('.clear--js');
 
+const notification = document.querySelector('.notification--js');
+
+let isEmpty;
+
+const entryCheck = () => {
+    let entry = localStorage.getItem('entry');
+    if (entry === null || entry === '') {
+        isEmpty = true;
+        console.log(isEmpty);
+    } else {
+        isEmpty = false;
+        console.log(isEmpty);
+    };
+}
+
+const manageClass = () => {
+    if (isEmpty === false) {
+        notification.classList.add('note__button-notification--visible')
+    } else {
+        notification.classList.remove('note__button-notification--visible')
+    }
+}
+
+
+entryCheck();
+manageClass();
+
 saveButton.addEventListener('click', () => {
     localStorage.setItem('entry', entryNote.value);
     entryNote.value = '';
+    entryCheck();
+    manageClass();
 })
 
 loadButton.addEventListener('click', () => {
     entryNote.value = localStorage.getItem('entry');
+    notification.classList.remove('note__button-notification--visible')
 })
 
 clearButton.addEventListener('click', () => {
     entryNote.value = '';
+    entryCheck();
+    manageClass();
 })
 
 deleteButton.addEventListener('click', () => {
     localStorage.removeItem('entry');
     entryNote.value = '';
+    entryCheck();
+    manageClass();
 })
