@@ -2,7 +2,7 @@
 
 Prosty notatnik z opcją zapisu treści notatki do local storage.
 
-![podgląd simple note](public/simple-note.jpg)
+![podgląd simple note](gh/simple-note.jpg)
 
 ## wypróbuj!
 
