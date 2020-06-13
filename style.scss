@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;700&family=Quicksand:wght@300;400;500;700&display=swap");
 
 // COLORS
-/* $dark-background: #bbb;
+/* $backgroud: #bbb;
 
 $dark-shadow: #666;
 $light-shadow: #fff;
@@ -18,7 +18,7 @@ $white: #000;
 
 $dark-gray: #e7e7e7; */
 
-$dark-background: #333;
+$backgroud: #333;
 
 $dark-shadow: #000000;
 $light-shadow: #5a5a5a;
@@ -41,7 +41,7 @@ $dark-gray: #202020;
 
 // MIXINS
 @mixin text-shadow-out {
-  color: $dark-background;
+  color: $backgroud;
   text-shadow: -2px -2px 8px $light-shadow, 2px 2px 8px $dark-shadow;
 }
 
@@ -50,12 +50,12 @@ $dark-gray: #202020;
 }
 
 @mixin box-shadow-out-normal {
-  background-color: $dark-background;
+  background-color: $backgroud;
   box-shadow: -2px -2px 8px $light-shadow, 2px 2px 8px $dark-shadow;
 }
 
 @mixin box-shadow-in-small {
-  background-color: $dark-background;
+  background-color: $backgroud;
   box-shadow: -1px -1px 5px $dark-shadow, 1px 1px 5px $light-shadow;
 }
 
@@ -93,7 +93,7 @@ html {
 }
 
 body {
-  background-color: $dark-background;
+  background-color: $backgroud;
   box-sizing: border-box;
   font-family: "Palanquin Dark", sans-serif;
 }
@@ -125,7 +125,7 @@ body {
     grid-column: 1 / span 12;
   }
   &__text {
-    background-color: $dark-background;
+    background-color: $backgroud;
     border-radius: 1rem;
     border-style: none;
     color: $gray;
@@ -133,7 +133,7 @@ body {
     font-size: 2.2rem;
     font-weight: 300;
     margin-bottom: 4rem;
-    min-height: 16rem;
+    min-height: 8rem;
     padding: 1rem;
     width: 100%;
     @include box-shadow-in-small();
@@ -144,7 +144,7 @@ body {
     }
   }
   &__button {
-    background-color: $dark-background;
+    background-color: $backgroud;
     border-radius: 2.5rem;
     border-style: none;
     font-size: 3.2rem;
