@@ -1,15 +1,16 @@
 # simple note
 
-Prosty notatnik z opcją zapisu treści notatki do **local storage**.
+Prosty notatnik z opcją zapisu treści notatki do local storage.
+
 
 ![podgląd simple note](public/simple-note.jpg)
 
-## po co?
+
+## po co i dlaczego?
 
 Projekt powstał w ramach szkolenia [WTF - co ten frontend](https://cotenfrontend.pl).
 
-Celem projektu było zapoznanie się z 
-
+Głównym celem projektu było zapoznanie się z możliwościami przechowywania danych w przeglądarce.
 
 ## jak działa?
 
@@ -17,7 +18,7 @@ Pozwala na zapisanie notatki do local storage, wczytanie zapisanej wcześniej no
 
 ## jak zostało zrobione?
 
-Technologie wykorzystane w projekcie:
+### Technologie wykorzystane w projekcie:
 
 - html
 - css (scss)
