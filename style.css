@@ -36,21 +36,15 @@ body {
   width: 100%; }
 
 .note {
-  column-gap: 10px;
-  display: grid;
   flex: 1;
-  grid-template-columns: repeat(12, 1fr);
   max-width: 80rem; }
   .note__title {
     font-size: 5rem;
-    grid-column: 1 / span 12;
     margin-top: 1rem;
     text-align: center;
     width: 100%;
     color: #333;
     text-shadow: -2px -2px 8px #5a5a5a, 2px 2px 8px #000000; }
-  .note__area {
-    grid-column: 1 / span 12; }
   .note__text {
     background-color: #333;
     border-radius: 1rem;
@@ -76,7 +70,6 @@ body {
     display: inline-block;
     font-size: 3.2rem;
     font-weight: 700;
-    grid-column: 1 / span 12;
     height: 4rem;
     margin-bottom: 2.4rem;
     position: relative;
@@ -181,73 +174,75 @@ body {
   .flex-container {
     align-items: center;
     min-height: 100vh; }
-  .note {
-    column-gap: 30px; }
-    .note__title {
-      font-size: 6.4rem; }
-    .note__text {
-      min-height: 50vh; }
-    .note__button--clear {
-      grid-column: 1 / span 3; }
-      .note__button--clear:hover::after {
-        color: #fff;
-        display: block;
-        font-family: "Quicksand", sans-serif;
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 1rem;
-        position: fixed;
-        right: 3vw;
-        top: 3vw;
-        width: 94vw;
-        right: 1vw;
-        top: 1vw;
-        width: 98vw; }
-    .note__button--delete {
-      grid-column: 4 / span 3; }
-      .note__button--delete:hover::after {
-        color: #fff;
-        display: block;
-        font-family: "Quicksand", sans-serif;
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 1rem;
-        position: fixed;
-        right: 3vw;
-        top: 3vw;
-        width: 94vw;
-        right: 1vw;
-        top: 1vw;
-        width: 98vw; }
-    .note__button--load {
-      grid-column: 7 / span 3; }
-      .note__button--load:hover::after {
-        color: #fff;
-        display: block;
-        font-family: "Quicksand", sans-serif;
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 1rem;
-        position: fixed;
-        right: 3vw;
-        top: 3vw;
-        width: 94vw;
-        right: 1vw;
-        top: 1vw;
-        width: 98vw; }
-    .note__button--save {
-      grid-column: 10 / span 3; }
-      .note__button--save:hover::after {
-        color: #fff;
-        display: block;
-        font-family: "Quicksand", sans-serif;
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 1rem;
-        position: fixed;
-        right: 3vw;
-        top: 3vw;
-        width: 94vw;
-        right: 1vw;
-        top: 1vw;
-        width: 98vw; } }
+  .buttons-flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between; }
+  .note__title {
+    font-size: 6.4rem; }
+  .note__text {
+    min-height: 50vh; }
+  .note__button {
+    flex: 1;
+    margin: 0 1rem;
+    padding: 0 2rem; }
+    .note__button:first-child {
+      margin-right: 0; }
+    .note__button:last-child {
+      margin-left: 0; }
+    .note__button--clear:hover::after {
+      color: #fff;
+      display: block;
+      font-family: "Quicksand", sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 1rem;
+      position: fixed;
+      right: 3vw;
+      top: 3vw;
+      width: 94vw;
+      right: 1vw;
+      top: 1vw;
+      width: 98vw; }
+    .note__button--delete:hover::after {
+      color: #fff;
+      display: block;
+      font-family: "Quicksand", sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 1rem;
+      position: fixed;
+      right: 3vw;
+      top: 3vw;
+      width: 94vw;
+      right: 1vw;
+      top: 1vw;
+      width: 98vw; }
+    .note__button--load:hover::after {
+      color: #fff;
+      display: block;
+      font-family: "Quicksand", sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 1rem;
+      position: fixed;
+      right: 3vw;
+      top: 3vw;
+      width: 94vw;
+      right: 1vw;
+      top: 1vw;
+      width: 98vw; }
+    .note__button--save:hover::after {
+      color: #fff;
+      display: block;
+      font-family: "Quicksand", sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 1rem;
+      position: fixed;
+      right: 3vw;
+      top: 3vw;
+      width: 94vw;
+      right: 1vw;
+      top: 1vw;
+      width: 98vw; } }

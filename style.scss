@@ -106,22 +106,16 @@ body {
 }
 
 .note {
-  column-gap: 10px;
-  display: grid;
   flex: 1;
-  grid-template-columns: repeat(12, 1fr);
   max-width: 80rem;
   &__title {
     font-size: 5rem;
-    grid-column: 1 / span 12;
     margin-top: 1rem;
     text-align: center;
     width: 100%;
     @include text-shadow-out();
   }
-  &__area {
-    grid-column: 1 / span 12;
-  }
+
   &__text {
     background-color: $backgroud;
     border-radius: 1rem;
@@ -148,7 +142,6 @@ body {
     display: inline-block;
     font-size: 3.2rem;
     font-weight: 700;
-    grid-column: 1 / span 12;
     height: 4rem;
     margin-bottom: 2.4rem;
     position: relative;
@@ -242,8 +235,14 @@ body {
     align-items: center;
     min-height: 100vh;
   }
+  
+.buttons-flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
   .note {
-    column-gap: 30px;
     &__title {
       font-size: 6.4rem;
     }
@@ -251,26 +250,31 @@ body {
         min-height: 50vh;
     }
     &__button {
+      flex: 1;
+      margin: 0 1rem;
+      padding: 0 2rem;
+      &:first-child {
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-left: 0;
+      }
       &--clear {
-        grid-column: 1 / span 3;
         &:hover::after {
           @include button-info-big-screen();
         }
       }
       &--delete {
-        grid-column: 4 / span 3;
         &:hover::after {
           @include button-info-big-screen();
         }
       }
       &--load {
-        grid-column: 7 / span 3;
         &:hover::after {
           @include button-info-big-screen();
         }
       }
       &--save {
-        grid-column: 10 / span 3;
         &:hover::after {
           @include button-info-big-screen();
         }
