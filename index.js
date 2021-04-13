@@ -8,6 +8,8 @@ const clearButton = document.querySelector(".clear--js");
 const notification = document.querySelector(".notification--js");
 
 let isEmpty;
+const array = [1, 2, 3];
+localStorage.setItem("array", array);
 
 const entryCheck = () => {
   let entry = localStorage.getItem("entry");
