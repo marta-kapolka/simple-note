@@ -15,10 +15,8 @@ const entryCheck = () => {
   let entry = localStorage.getItem("entry");
   if (entry === null || entry === "") {
     isEmpty = true;
-    console.log(isEmpty);
   } else {
     isEmpty = false;
-    console.log(isEmpty);
   }
 };
 

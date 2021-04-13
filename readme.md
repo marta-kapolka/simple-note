@@ -29,6 +29,8 @@ The main goal of the project was to understand how **local and session storage**
 
 App lets you save your note in browsers local storage and get it back later. If there is a note saved in storage there is a notification on a load button. You can also delete a note from storage and clear the textbox using a button.
 
+![page features preview](gh/simple-note_screen.gif)
+
 ## Credits
 
 Project was build as an exercise during [WTF - co ten frontend](https://cotenfrontend.pl) course.
